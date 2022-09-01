@@ -1,7 +1,11 @@
-<brickber-shape-rectangle
-  [width]="100"
-  [height]="100"
-  color="lightgreen"
-  borderColor="red"
-  borderWidth="4px"
-></brickber-shape-rectangle>
+<ng-container *ngFor="let type of shapeTypes">
+  <brickber-shape
+    [type]="type"
+    [width]="100"
+    [height]="100"
+    color="lightgreen"
+    borderColor="red"
+    borderWidth="4px"
+  ></brickber-shape>
+</ng-container>
+

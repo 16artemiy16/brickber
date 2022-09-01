@@ -1,11 +1,17 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
+// TODO: there is a problem with triangle border
+
 @Component({
-  selector: 'brickber-shape-rectangle',
-  templateUrl: './rectangle.component.html',
+  selector: 'brickber-shape',
+  templateUrl: './shape.component.html',
+  styleUrls: ['./shape.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RectangleComponent {
+export class ShapeComponent {
+  @Input()
+  type: 'rectangle' | 'triangle' | 'circle' = 'rectangle';
+
   @Input()
   width: number = 0;
 
@@ -26,6 +32,7 @@ export class RectangleComponent {
 
   get style() {
     const { width, height, color: backgroundColor, borderColor, borderWidth, borderStyle } = this;
+
     return {
       width: `${width}px`,
       height: `${height}px`,
@@ -34,5 +41,9 @@ export class RectangleComponent {
       borderColor,
       borderWidth,
     };
+  }
+
+  get class() {
+    return `shape shape-${this.type}`
   }
 }

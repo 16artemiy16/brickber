@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RectangleComponent } from '../components/rectangle.component';
+import { ShapeComponent } from '../components/shape/shape.component';
 
 @NgModule({
   imports: [CommonModule],
   declarations: [
-    RectangleComponent
+    ShapeComponent
   ],
   exports: [
-    RectangleComponent,
+    ShapeComponent
   ]
 })
 export class ShapeModule {}

@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'playground';
+
+  readonly shapeTypes: ['triangle', 'circle', 'rectangle'] = ['triangle', 'circle', 'rectangle'];
 }
