@@ -1,20 +1,23 @@
 {
   "projectType": "library",
-  "sourceRoot": "libs/shape/src",
+  "sourceRoot": "libs/constuctor/ui/src",
   "prefix": "brickber",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shape"],
+      "outputs": ["coverage/libs/constuctor/ui"],
       "options": {
-        "jestConfig": "libs/shape/jest.config.ts",
+        "jestConfig": "libs/constuctor/ui/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["libs/shape/**/*.ts", "libs/shape/**/*.html"]
+        "lintFilePatterns": [
+          "libs/constuctor/ui/**/*.ts",
+          "libs/constuctor/ui/**/*.html"
+        ]
       }
     }
   },

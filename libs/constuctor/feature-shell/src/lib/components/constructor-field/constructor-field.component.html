@@ -1,0 +1,13 @@
+<div class="field">
+  <ng-container *ngFor="let item of (items$ | async)">
+    <brickber-shape
+      style="position: absolute"
+      [style.left.px]="item.coords.x"
+      [style.top.px]="item.coords.y"
+      [width]="item.width"
+      [height]="item.height"
+      [color]="item.color"
+    ></brickber-shape>
+
+  </ng-container>
+</div>
