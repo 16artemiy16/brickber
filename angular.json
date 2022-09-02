@@ -2,10 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "constuctor-data-access": "libs/constuctor/data-access",
-    "constuctor-feature-shell": "libs/constuctor/feature-shell",
-    "constuctor-ui": "libs/constuctor/ui",
-    "constuctor-util": "libs/constuctor/util",
+    "constructor-data-access": "libs/constructor/data-access",
+    "constructor-feature-shell": "libs/constructor/feature-shell",
+    "constructor-ui": "libs/constructor/ui",
+    "constructor-util": "libs/constructor/util",
     "playground": "apps/playground",
     "playground-e2e": "apps/playground-e2e"
   }

@@ -15,14 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@brickber/constuctor/data-access": [
-        "libs/constuctor/data-access/src/index.ts"
+      "@brickber/constructor/data-access": [
+        "libs/constructor/data-access/src/index.ts"
       ],
-      "@brickber/constuctor/feature-shell": [
-        "libs/constuctor/feature-shell/src/index.ts"
+      "@brickber/constructor/feature-shell": [
+        "libs/constructor/feature-shell/src/index.ts"
       ],
-      "@brickber/constuctor/ui": ["libs/constuctor/ui/src/index.ts"],
-      "@brickber/constuctor/util": ["libs/constuctor/util/src/index.ts"]
+      "@brickber/constructor/ui": ["libs/constructor/ui/src/index.ts"],
+      "@brickber/constructor/util": ["libs/constructor/util/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

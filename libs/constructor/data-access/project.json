@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/constructor/data-access/src",
+  "prefix": "brickber",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/constructor/data-access"],
+      "options": {
+        "jestConfig": "libs/constructor/data-access/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/constructor/data-access/**/*.ts",
+          "libs/constructor/data-access/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/constructor/feature-shell/src",
+  "prefix": "brickber",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/constructor/feature-shell"],
+      "options": {
+        "jestConfig": "libs/constructor/feature-shell/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/constructor/feature-shell/**/*.ts",
+          "libs/constructor/feature-shell/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

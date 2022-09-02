@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ConstructorFeatureShellModule } from '@brickber/constructor/feature-shell';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
-import { ConstuctorFeatureShellModule } from '@brickber/constuctor/feature-shell';
-import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    ConstuctorFeatureShellModule,
+    ConstructorFeatureShellModule,
     StoreModule.forRoot({}),
   ],
   providers: [],
