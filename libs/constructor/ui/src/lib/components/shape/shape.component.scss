@@ -1,11 +1,4 @@
-$selection-color: blue;
-$selection-border-width: 2px;
-$selection-dot-shift: 6px;
-
 .shape {
-  &-selection-frame {
-    border: $selection-border-width $selection-color dashed;
-  }
 
   &-triangle {
     clip-path: polygon(50% 0, 100% 100%, 0 100%)
@@ -13,62 +6,5 @@ $selection-dot-shift: 6px;
 
   &-circle {
     border-radius: 50%;
-  }
-
-  &-selection-frame {
-    position: relative;
-  }
-
-
-  &-dot{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: $selection-color;
-    border-radius: 50%;
-
-    &__1 {
-      top: -$selection-dot-shift;
-      left: -$selection-dot-shift;
-    }
-
-    &__2 {
-      top: -$selection-dot-shift;
-      left: 50%;
-      right: 50%;
-    }
-
-    &__3 {
-      top: -$selection-dot-shift;
-      right: -$selection-dot-shift;
-    }
-
-    &__4 {
-      top: 50%;
-      bottom: 50%;
-      left: -$selection-dot-shift;
-    }
-
-    &__5 {
-      top: 50%;
-      bottom: 50%;
-      right: -$selection-dot-shift;
-    }
-
-    &__6 {
-      bottom: -$selection-dot-shift;
-      left: -$selection-dot-shift
-    }
-
-    &__7 {
-      bottom: -$selection-dot-shift;
-      left: 50%;
-      right: 50%;
-    }
-
-    &__8 {
-      bottom: -$selection-dot-shift;
-      right: -$selection-dot-shift;
-    }
   }
 }

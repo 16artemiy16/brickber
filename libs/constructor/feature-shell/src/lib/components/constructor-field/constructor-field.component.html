@@ -1,15 +1,18 @@
 <div class="field">
   <ng-container *ngFor="let item of (items$ | async)">
-    <brickber-shape
-      style="position: absolute"
+    <brickber-selection-frame
+      [isSelected]="true"
       [style.left.px]="item.coords.x"
       [style.top.px]="item.coords.y"
-      [width]="item.width"
-      [height]="item.height"
-      [color]="item.color"
-      [borderColor]="item.borderColor"
-      [borderWidth]="item.borderWidth"
-    ></brickber-shape>
-
+      style="position: absolute"
+    >
+      <brickber-shape
+        [width]="item.width"
+        [height]="item.height"
+        [color]="item.color"
+        [borderColor]="item.borderColor"
+        [borderWidth]="item.borderWidth"
+      ></brickber-shape>
+    </brickber-selection-frame>
   </ng-container>
 </div>

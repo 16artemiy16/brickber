@@ -1,0 +1,75 @@
+$selection-color: blue;
+$selection-border-width: 2px;
+$selection-dot-shift: 6px;
+
+.selection-frame {
+  position: relative;
+  border: $selection-border-width $selection-color dashed;
+
+
+  &-selection-frame {
+    position: relative;
+  }
+
+
+  &__dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: $selection-color;
+    border-radius: 50%;
+
+    &__1 {
+      cursor: nwse-resize;
+      top: -$selection-dot-shift;
+      left: -$selection-dot-shift;
+    }
+
+    &__2 {
+      cursor: ns-resize;
+      top: -$selection-dot-shift;
+      left: 50%;
+      right: 50%;
+    }
+
+    &__3 {
+      cursor: nesw-resize;
+      top: -$selection-dot-shift;
+      right: -$selection-dot-shift;
+    }
+
+    &__4 {
+      cursor: ew-resize;
+      top: 50%;
+      bottom: 50%;
+      left: -$selection-dot-shift;
+    }
+
+    &__5 {
+      cursor: ew-resize;
+      top: 50%;
+      bottom: 50%;
+      right: -$selection-dot-shift;
+    }
+
+    &__6 {
+      cursor: nesw-resize;
+      bottom: -$selection-dot-shift;
+      left: -$selection-dot-shift
+    }
+
+    &__7 {
+      cursor: ns-resize;
+      bottom: -$selection-dot-shift;
+      left: 50%;
+      right: 50%;
+    }
+
+    &__8 {
+      cursor: nwse-resize;
+      bottom: -$selection-dot-shift;
+      right: -$selection-dot-shift;
+    }
+  }
+
+}
