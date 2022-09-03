@@ -15,7 +15,7 @@ export class ConstructorFieldComponent {
   ) {
     setTimeout(() => {
       this.createTestShape();
-    }, 1000);
+    }, 0);
   }
 
   items$: Observable<ShapeOnFieldI[]> = this.fieldSandbox.shapes$.pipe(startWith([] as ShapeOnFieldI[]));
@@ -23,9 +23,12 @@ export class ConstructorFieldComponent {
   createTestShape() {
     this.fieldSandbox.createShape({
       type: ShapeType.Rectangle,
-      width: 50,
-      height: 50,
-      color: 'green',
+      borderWidth: '5px',
+      borderColor: 'red',
+      borderStyle: 'solid',
+      width: 390,
+      height: 300,
+      color: 'lightpink',
     }, { x: 10, y: 10 })
   }
 }
