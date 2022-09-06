@@ -4,11 +4,9 @@ $selection-dot-shift: 6px;
 
 .selection-frame {
   position: relative;
-  border: $selection-border-width $selection-color dashed;
 
-
-  &-selection-frame {
-    position: relative;
+  &_selected {
+    border: $selection-border-width $selection-color dashed;
   }
 
 

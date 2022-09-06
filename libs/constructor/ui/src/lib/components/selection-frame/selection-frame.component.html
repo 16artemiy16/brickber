@@ -1,12 +1,14 @@
-<div class="selection-frame">
-  <div class="selection-frame__dot selection-frame__dot__1"></div>
-  <div class="selection-frame__dot selection-frame__dot__2"></div>
-  <div class="selection-frame__dot selection-frame__dot__3"></div>
-  <div class="selection-frame__dot selection-frame__dot__4"></div>
-  <div class="selection-frame__dot selection-frame__dot__5"></div>
-  <div class="selection-frame__dot selection-frame__dot__6"></div>
-  <div class="selection-frame__dot selection-frame__dot__7"></div>
-  <div class="selection-frame__dot selection-frame__dot__8"></div>
+<div class="selection-frame" [class.selection-frame_selected]="isSelected">
+  <ng-container *ngIf="isSelected">
+    <div class="selection-frame__dot selection-frame__dot__1"></div>
+    <div class="selection-frame__dot selection-frame__dot__2"></div>
+    <div class="selection-frame__dot selection-frame__dot__3"></div>
+    <div class="selection-frame__dot selection-frame__dot__4"></div>
+    <div class="selection-frame__dot selection-frame__dot__5"></div>
+    <div class="selection-frame__dot selection-frame__dot__6"></div>
+    <div class="selection-frame__dot selection-frame__dot__7"></div>
+    <div class="selection-frame__dot selection-frame__dot__8"></div>
+  </ng-container>
 
   <ng-content></ng-content>
 </div>

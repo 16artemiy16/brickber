@@ -7,3 +7,13 @@ export const selectShapes = createSelector(
   selectFeature,
   (state) => state.shapes,
 );
+
+export const selectSelectedShapeIds = createSelector(
+  selectFeature,
+  (state) => state.selectedShapeIds,
+);
+
+export const selectIsShapeSelected = (id: string) => createSelector(
+  selectFeature,
+  (state) => state.selectedShapeIds.has(id),
+);

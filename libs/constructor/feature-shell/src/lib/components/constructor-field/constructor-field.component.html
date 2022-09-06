@@ -1,12 +1,13 @@
 <div class="field">
   <ng-container *ngFor="let item of (items$ | async)">
     <brickber-selection-frame
-      [isSelected]="true"
+      [isSelected]="(selectedIds$ | async)!.has(item._id)"
       [style.left.px]="item.coords.x"
       [style.top.px]="item.coords.y"
       style="position: absolute"
     >
       <brickber-shape
+        (click)="toggleSelection(item._id)"
         [width]="item.width"
         [height]="item.height"
         [color]="item.color"

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FieldSandbox } from '../../../../../data-access/src/lib/store/field.sandbox';
-import { Observable, startWith } from 'rxjs';
+import { Observable, startWith, take } from 'rxjs';
 import { ShapeOnFieldI, ShapeType } from '@brickber/constructor/util';
 
 @Component({
@@ -19,8 +19,9 @@ export class ConstructorFieldComponent {
   }
 
   items$: Observable<ShapeOnFieldI[]> = this.fieldSandbox.shapes$.pipe(startWith([] as ShapeOnFieldI[]));
+  selectedIds$: Observable<Set<string>> = this.fieldSandbox.selectedShapeIds$;
 
-  createTestShape() {
+  createTestShape(): void {
     this.fieldSandbox.createShape({
       type: ShapeType.Rectangle,
       borderWidth: '5px',
@@ -30,5 +31,9 @@ export class ConstructorFieldComponent {
       height: 300,
       color: 'lightpink',
     }, { x: 10, y: 10 })
+  }
+
+  toggleSelection(id: string): void {
+    this.fieldSandbox.toggleShapeSelection(id);
   }
 }

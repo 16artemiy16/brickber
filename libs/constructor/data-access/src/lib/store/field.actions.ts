@@ -3,3 +3,4 @@ import { CoordsI, ShapeI } from '@brickber/constructor/util';
 
 export const createShape = createAction('[Field Action] Create Shape', props<{ shape: ShapeI, coords: CoordsI }>());
 export const removeShape = createAction('[Field Action] Remove Shape', props<{ id: string }>());
+export const toggleShapeSelection = createAction('[Field Action] Toggle Shape Selection', props<{ id: string, flag: boolean }>());
